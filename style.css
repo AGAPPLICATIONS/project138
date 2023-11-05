@@ -14,3 +14,13 @@ background-size: cover;
 #playbutton, #status{
     font-size: 20px;
 }
+.footer{
+    width: 100%;
+    bottom: 0 !important;
+    position:fixed;
+    background-color: gray;
+    color: white;
+}
+.modal-dialog{
+    width:90%;
+}
