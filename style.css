@@ -24,3 +24,29 @@ background-size: cover;
 .modal-dialog{
     width:90%;
 }
+#canvas{
+    border: 4px yellow ridge;
+    width: fit-content;
+    border-radius: 10px;
+    animation-name: lol;
+    animation-duration: 20s;
+    animation-iteration-count:infinite;
+}
+@keyframes lol{
+    0%{
+        border: 4px yellow ridge;
+    }
+    25%{
+            border: 6px rgb(0, 255, 21) ridge;
+
+    }
+    50%{
+        border: 8px rgb(0, 102, 255) ridge;
+    }
+    75%{
+        border: 6px rgb(255, 34, 0) ridge;
+    }
+    100%{
+        border: 4px rgb(255, 200, 0) ridge;
+    }
+}
