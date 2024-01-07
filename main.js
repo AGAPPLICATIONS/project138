@@ -88,7 +88,7 @@ function gotposes(results){
   if(results.length>0){
     Rwrx=results[0].pose.rightWrist.x;
     Rwry=results[0].pose.rightWrist.y;
-    Rwrscore=results[0].pose.rightWrist.confidence;
+    Rwrscore=results[0].pose.keypoints[10].score;
 
   }
 }
