@@ -1,5 +1,9 @@
 
 /*created by prashant shukla */
+Rwrx=0;
+Rwry=0;
+Rwrscore=0;
+
 
 var paddle2 =10,paddle1=10;
 
@@ -36,7 +40,11 @@ console.log("model is loaded");
 }
 function draw(){
  image(video,0,0,700,600);
-  
+  if(Rwrscore>0.2){
+     fill("orange");
+     stroke("blue");
+     circle(Rwrx,Rwry,20);
+  }
 
  fill("black");
  stroke("black");
@@ -75,7 +83,15 @@ function draw(){
     move();
 }
 
+function gotposes(results){
+  console.log(results);
+  if(results.length>0){
+    Rwrx=results[0].pose.rightWrist.x;
+    Rwry=results[0].pose.rightWrist.y;
+    Rwrscore=results[0].pose.rightWrist.confidence;
 
+  }
+}
 
 //function reset when ball does notcame in the contact of padde
 function reset(){
